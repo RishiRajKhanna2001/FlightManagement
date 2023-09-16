@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Airport.init({
-    name: DataTypes.STRING,
-    address: {
+    name:{
       type:DataTypes.STRING,
       allowNull:false
     },
+    address: DataTypes.STRING,
     cityId: DataTypes.INTEGER
   }, {
     sequelize,
