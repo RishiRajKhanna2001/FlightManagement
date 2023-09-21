@@ -13,42 +13,39 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Flight.init({
-    flightNumber: {
-      type:DataTypes.STRING,
-      allowNull:false,
-      unique:true
-    },
-    airplaneId: {
-      type:DataTypes.INTEGER,
-      allowNull:false
-    },
-    departurAirportId: {
-      type:DataTypes.INTEGER,
-      allowNull:false
-    },
-    arrivalAirportId: {
-      type:DataTypes.INTEGER,
-      allowNull:false
-    },
-    departureTime: {
-      type:DataTypes.DATE,
-      allowNull:false
-    },
-    arrivalTime: {
-      type:DataTypes.DATE,
-      allowNull:false
-    },
-    price: {
-    type:DataTypes.INTEGER,
-    allowNull:false
-  },
-    boardingGate: {
+  Flight.init({ flightNumber: {
     type:DataTypes.STRING,
+    allowNull: false,
+    unique: true
   },
-    totalSeats: {
-    type:DataTypes.INTEGER,
-    allowNull:false
+  airplaneId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  departureAirportId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  arrivalAirportId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  arrivalTime: {
+    allowNull: false,
+    type: DataTypes.DATE
+  },
+  departureTime: {
+    allowNull: false,
+    type: DataTypes.DATE
+  },
+  price: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  boardingGate: DataTypes.STRING,
+  totalSeats: {
+    type: DataTypes.INTEGER,
+    allowNull: false
   }  }, {
     sequelize,
     modelName: 'Flight',
