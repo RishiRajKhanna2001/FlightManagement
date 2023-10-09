@@ -1,4 +1,4 @@
-const ClientErrorsCodes=Object.freeze({
+const ClientErrorsCodes=Object.freeze({ // by doing "freeze" no other files can change the values
     BAD_REQUEST:400,
     UNAUTHORISED:401,
     NOT_FOUND:404
